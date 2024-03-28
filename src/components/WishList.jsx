@@ -1,9 +1,9 @@
-import React from 'react'
 
 const WishList = () => {
+
   return (
     <div>
-      <h2>wish to me</h2>
+      <h4>Book is not available</h4>
     </div>
   )
 }

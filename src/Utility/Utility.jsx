@@ -20,4 +20,13 @@ const saveBook = id =>{
   return toast.error("All ready added")
 }
 
-export { getStoredBook, saveBook};
+
+// delete 
+const deleteBook = id =>{
+  const books = getStoredBook()
+  const remaining = books.filter(book => book.bookId !== id)
+  localStorage.setItem('Read-Book', JSON.stringify(remaining))
+  toast.success('Remove Book!')
+}
+
+export { getStoredBook, saveBook, deleteBook};

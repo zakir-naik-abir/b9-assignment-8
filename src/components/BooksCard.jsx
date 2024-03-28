@@ -1,6 +1,5 @@
 import { FaRegStar } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-// import placeholderImage from '../assets/404'
 
 const Book = ({book}) => {
  const { bookId, bookName, author, image, category, rating, tags } = book;
