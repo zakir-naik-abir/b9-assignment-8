@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { createBrowserRouter } from "react-router-dom";
-import ReadToBooks from './pages/ReadToBooks.jsx';
+import PagesToRead from './pages/PagesToRead';
 import MainLayout from './layouts/MainLayout.jsx';
 import Home from './pages/Home.jsx';
 import ListedBooks from './pages/ListedBooks.jsx';
@@ -9,7 +9,8 @@ import BookDetails from './pages/BookDetails.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import BookRead from './components/BookRead.jsx';
 import WishList from './components/WishList.jsx';
-import ReadBooks from './components/ReadBooks.jsx';
+import Signin from './Register/Signin.jsx';
+import Signup from './Register/Signup.jsx';
 
 export const router = createBrowserRouter([
   {
@@ -45,7 +46,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "/pagestoread",
-        element: <ReadToBooks></ReadToBooks>,
+        element: <PagesToRead></PagesToRead>,
+      },
+      {
+        path: "/signin",
+        element: <Signin></Signin>,
+      },
+      {
+        path: "/signup",
+        element: <Signup></Signup>,
       },
     ]
   },

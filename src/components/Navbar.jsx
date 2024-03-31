@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('garden');
 
   useEffect(() => {
     localStorage.setItem('theme', theme)
@@ -17,7 +17,7 @@ const Navbar = () => {
       setTheme('dark')
     }
     else{
-      setTheme('light')
+      setTheme('garden')
     }
   }
   // console.log(theme)
@@ -59,8 +59,13 @@ const Navbar = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
           </label>
           <div className='space-x-5'>
-            <button className='btn btn-success'>Sign In</button>
-            <button className='btn btn-primary'>Sign Up</button>
+            <NavLink to={'/signin'}>
+              <button className='btn btn-success'>Sign In</button>
+            </NavLink>
+            <NavLink to={'/signup'}>
+              <button className='btn btn-primary'>Sign Up</button>
+            </NavLink>
+            
           </div>
         </div>
       </div>      

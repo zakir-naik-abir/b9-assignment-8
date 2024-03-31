@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const Banner = () => {
   return (
-    <div className="flex justify-around items-center bg-gray-300 mt-5 p-12 rounded-lg">
+    <div className="md:flex justify-around items-center bg-gray-300 mt-5 p-12 rounded-lg">
       <div className="">
         <h2 className="mb-10">Books To Freshen Up <br />Your Bookshelf</h2>
         <NavLink to={'./listedbooks'}><button className="btn btn-success">View The List</button></NavLink>

@@ -5,9 +5,10 @@ import { MdOutlinePeopleAlt } from "react-icons/md";
 
 
 
-const ReadBooks = ({book,handleDelete}) => {
+const ReadBooks = ({book, deletable, handleDelete}) => {
   const{ bookName, bookId , author, image, category, rating, tags, publisher, totalPages, yearOfPublishing } = book;
 
+ 
   
   return (
     <div className='mt-5'>
@@ -18,7 +19,10 @@ const ReadBooks = ({book,handleDelete}) => {
         <div className="mr-20 w-4/6">
           <div className="flex justify-between">
             <h5 className="font-semibold">{bookName}</h5>
-            <button onClick={() => handleDelete(bookId)} className="btn btn-secondary">Remove</button>
+            {
+              deletable && (<button onClick={() => handleDelete(bookId)} className="btn btn-secondary">Remove</button>)
+            }
+            
           </div>
           <h5 className='border-b-2 pb-5'>By : {author}</h5>
           <div className="flex border-b-2 pb-5 items-center mt-5 gap-7">

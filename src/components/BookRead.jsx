@@ -15,7 +15,8 @@ const BookRead = () => {
   
   useEffect( () =>{
     const storedBooks = getStoredBook();
-    // console.log(storedBooks)
+    // setReadBooks(storedBooks)
+
     if(books.length > 0){
       // const bookReaded = books.filter(book => storedBooks.includes(book.bookId))
       const bookReaded = [];
@@ -30,18 +31,22 @@ const BookRead = () => {
     }
   } ,[])
 
-  // remove to localstorage
   const handleDelete = id =>{
     deleteBook(id)
+    const bookReaded = getStoredBook();
+    setReadBooks(bookReaded);
   }
 
 
+  if(readBooks.length < 1){
+    return 'Read book no Avaible'
+  }
 
   return (
     <div>
       <div className='mx-10'>
         {
-          readBooks.map(book => (<ReadBooks handleDelete={handleDelete}  deleteable={true} key={book.id} book={book}></ReadBooks>))
+          readBooks.map(book => (<ReadBooks handleDelete={handleDelete}  deletable={true}   key={book.id} book={book}></ReadBooks>))
         }
       </div>
     </div>

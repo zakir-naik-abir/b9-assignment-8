@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, Outlet, useLoaderData } from 'react-router-dom';
 import { getStoredBook } from '../Utility/Utility';
+import { Helmet } from 'react-helmet-async';
 
 
 const ListedBooks = () => {
@@ -32,6 +33,9 @@ const ListedBooks = () => {
 
   return (
     <div className='mx-5'>
+      <Helmet>
+        <title>Book Vibe | ListedBook</title>
+      </Helmet>
       <div className='mt-5'>
         <div className='text-center'>
           <h2 className='w-full bg-gray-200'>Books</h2> 

@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom"
 import Banner from "../components/Banner"
 import BooksCard from "../components/BooksCard"
 import { useState } from "react"
+import { Helmet } from "react-helmet-async"
 
 const Home = () => {
 
@@ -11,6 +12,9 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Book Vibe | Home</title>
+      </Helmet>
       <Banner></Banner>
       
       <div className="mt-10 mx-10">

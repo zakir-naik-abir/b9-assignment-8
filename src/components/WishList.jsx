@@ -3,9 +3,9 @@ const WishList = () => {
 
   return (
     <div>
-      <h4>Book is not available</h4>
+      <h4>Wish book</h4>
     </div>
   )
 }
 
-export default WishList
+export default WishList;
